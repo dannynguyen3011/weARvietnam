@@ -1,0 +1,23 @@
+[
+  {
+    "id": "nghe-nhan-1",
+    "name": "Nghệ nhân Bích",
+    "province": "Thừa Thiên Huế",
+    "bio": "Thợ may áo dài truyền thống.",
+    "avatar": "/overlay.png"
+  },
+  {
+    "id": "nghe-nhan-2",
+    "name": "Nghệ nhân Pàng",
+    "province": "Lào Cai",
+    "bio": "Dệt thổ cẩm H'Mông.",
+    "avatar": "/overlay.png"
+  },
+  {
+    "id": "nghe-nhan-3",
+    "name": "Nghệ nhân Lành",
+    "province": "Cao Bằng",
+    "bio": "Thổ cẩm Tày.",
+    "avatar": "/overlay.png"
+  }
+]
