@@ -1292,7 +1292,7 @@ footer a:hover {
   color: white;
 }
 
-.slider-track {
+.size-finder .slider-track {
   flex: 1;
   position: relative;
   height: 8px;
@@ -1300,7 +1300,7 @@ footer a:hover {
   border-radius: 4px;
 }
 
-.slider-marks {
+.size-finder .slider-marks {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1308,14 +1308,14 @@ footer a:hover {
   padding: 0 4px;
 }
 
-.slider-marks span {
+.size-finder .slider-marks span {
   width: 2px;
   height: 16px;
   background: var(--text-light);
   border-radius: 1px;
 }
 
-.slider-thumb {
+.size-finder .slider-thumb {
   position: absolute;
   top: -4px;
   width: 16px;

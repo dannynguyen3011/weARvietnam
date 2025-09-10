@@ -57,7 +57,17 @@ export default function ProductSlider({
     setIsAutoPlay(prev => !prev)
   }
   
-  if (products.length === 0) return null
+  if (products.length === 0) {
+    console.log('ProductSlider: No products provided')
+    return null
+  }
+  
+  console.log('ProductSlider:', { 
+    productsLength: products.length, 
+    itemsPerView, 
+    maxIndex, 
+    currentIndex 
+  })
   
   return (
     <div className="product-slider-container">

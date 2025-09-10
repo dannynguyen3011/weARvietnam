@@ -120,7 +120,7 @@ export default function SizeFinder({ isOpen, onClose, product, onSizeSelect }) {
 
   return (
     <div className="size-finder-overlay">
-      <div className="size-finder-modal">
+      <div className="size-finder-modal size-finder">
         <div className="size-finder-header">
           <div className="step-indicator">
             <span className="step-number">{currentStep} OF 3</span>
