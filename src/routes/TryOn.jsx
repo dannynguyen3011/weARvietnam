@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import CameraMock from '../components/CameraMock'
+import SizeFinder from '../components/SizeFinder'
 import products from '../data/products.json'
 import { useCart } from '../store/cart'
 
@@ -34,6 +35,8 @@ const getEthnicIcon = (ethnic) => {
 
 export default function TryOn() {
   const [current, setCurrent] = useState(products[0])
+  const [showSizeFinder, setShowSizeFinder] = useState(false)
+  const [selectedSize, setSelectedSize] = useState(null)
   const add = useCart(s => s.add)
   
   return (
@@ -98,6 +101,42 @@ export default function TryOn() {
               </div>
             </div>
             <div className="action-buttons">
+              {/* Size Selection */}
+              {current.sizes && (
+                <div style={{marginBottom: '16px'}}>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px'}}>
+                    <button 
+                      className="size-finder-btn"
+                      onClick={() => setShowSizeFinder(true)}
+                    >
+                      📏 Find my size
+                    </button>
+                    {selectedSize && (
+                      <div style={{
+                        padding: '6px 12px',
+                        background: 'var(--accent)',
+                        color: 'white',
+                        borderRadius: '6px',
+                        fontSize: '14px',
+                        fontWeight: '600'
+                      }}>
+                        Size: {selectedSize}
+                      </div>
+                    )}
+                  </div>
+                  {current.sizes.sizeGuide && (
+                    <p style={{
+                      fontSize: '13px',
+                      color: 'var(--text-light)',
+                      margin: '4px 0 0 0',
+                      fontStyle: 'italic'
+                    }}>
+                      💡 {current.sizes.sizeGuide}
+                    </p>
+                  )}
+                </div>
+              )}
+              
               <button className="btn ghost" onClick={()=>add(current)}>
                 🛒 Thêm vào giỏ
               </button>
@@ -108,6 +147,17 @@ export default function TryOn() {
           </div>
         </section>
       </div>
+      
+      {/* Size Finder Modal */}
+      <SizeFinder
+        isOpen={showSizeFinder}
+        onClose={() => setShowSizeFinder(false)}
+        product={current}
+        onSizeSelect={(size) => {
+          setSelectedSize(size)
+          setShowSizeFinder(false)
+        }}
+      />
     </div>
   )
 }

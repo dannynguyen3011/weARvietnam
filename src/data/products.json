@@ -9,7 +9,19 @@
     "artisanId": "nghe-nhan-1",
     "village": "Làng Cẩm Chế",
     "province": "Thừa Thiên Huế",
-    "coordinates": [16.4637, 107.5909]
+    "coordinates": [16.4637, 107.5909],
+    "sizes": {
+      "available": ["XS", "S", "M", "L", "XL", "XXL"],
+      "measurements": {
+        "XS": { "chest": "80-84", "waist": "60-64", "length": "140", "shoulder": "36" },
+        "S": { "chest": "84-88", "waist": "64-68", "length": "142", "shoulder": "38" },
+        "M": { "chest": "88-92", "waist": "68-72", "length": "144", "shoulder": "40" },
+        "L": { "chest": "92-96", "waist": "72-76", "length": "146", "shoulder": "42" },
+        "XL": { "chest": "96-100", "waist": "76-80", "length": "148", "shoulder": "44" },
+        "XXL": { "chest": "100-104", "waist": "80-84", "length": "150", "shoulder": "46" }
+      },
+      "sizeGuide": "Áo dài Huế được cắt may theo phong cách truyền thống, ôm sát cơ thể. Vui lòng chọn size theo số đo ngực và eo."
+    }
   },
   {
     "id": "tho-cam-1",
@@ -21,7 +33,17 @@
     "artisanId": "nghe-nhan-2",
     "village": "Bản Cát Cát",
     "province": "Lào Cai",
-    "coordinates": [22.3380, 103.8442]
+    "coordinates": [22.3380, 103.8442],
+    "sizes": {
+      "available": ["S", "M", "L", "XL"],
+      "measurements": {
+        "S": { "waist": "60-65", "hips": "85-90", "length": "85", "chest": "80-85" },
+        "M": { "waist": "65-70", "hips": "90-95", "length": "87", "chest": "85-90" },
+        "L": { "waist": "70-75", "hips": "95-100", "length": "89", "chest": "90-95" },
+        "XL": { "waist": "75-80", "hips": "100-105", "length": "91", "chest": "95-100" }
+      },
+      "sizeGuide": "Váy thổ cẩm H'Mông có form dáng rộng rãi, thoải mái. Chọn size theo số đo eo và hông."
+    }
   },
   {
     "id": "khan-choang-1",
@@ -45,7 +67,18 @@
     "artisanId": "nghe-nhan-1",
     "village": "Làng Vạn Phúc",
     "province": "Hà Nội",
-    "coordinates": [20.9637, 105.7381]
+    "coordinates": [20.9637, 105.7381],
+    "sizes": {
+      "available": ["XS", "S", "M", "L", "XL"],
+      "measurements": {
+        "XS": { "chest": "78-82", "waist": "58-62", "length": "65", "shoulder": "35" },
+        "S": { "chest": "82-86", "waist": "62-66", "length": "67", "shoulder": "37" },
+        "M": { "chest": "86-90", "waist": "66-70", "length": "69", "shoulder": "39" },
+        "L": { "chest": "90-94", "waist": "70-74", "length": "71", "shoulder": "41" },
+        "XL": { "chest": "94-98", "waist": "74-78", "length": "73", "shoulder": "43" }
+      },
+      "sizeGuide": "Áo tứ thân truyền thống có form ôm vừa phải. Chọn size theo số đo ngực và vai."
+    }
   },
   {
     "id": "ao-ba-ba-1",
@@ -57,7 +90,18 @@
     "artisanId": "nghe-nhan-2",
     "village": "Làng Nghề Thổ Cẩm Tuyến Quảng",
     "province": "An Giang",
-    "coordinates": [10.5216, 105.1258]
+    "coordinates": [10.5216, 105.1258],
+    "sizes": {
+      "available": ["S", "M", "L", "XL", "XXL"],
+      "measurements": {
+        "S": { "chest": "85-90", "waist": "free", "length": "60", "shoulder": "40" },
+        "M": { "chest": "90-95", "waist": "free", "length": "62", "shoulder": "42" },
+        "L": { "chest": "95-100", "waist": "free", "length": "64", "shoulder": "44" },
+        "XL": { "chest": "100-105", "waist": "free", "length": "66", "shoulder": "46" },
+        "XXL": { "chest": "105-110", "waist": "free", "length": "68", "shoulder": "48" }
+      },
+      "sizeGuide": "Áo bà ba có form rộng, thoải mái. Chọn size theo số đo ngực, phần eo để tự do."
+    }
   },
   {
     "id": "khan-pieu-thai-1",
