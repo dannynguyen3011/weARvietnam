@@ -101,39 +101,53 @@ export default function ProductSlider({
         </div>
       </div>
       
-      <div 
-        className="product-slider"
-      >
-        <div 
-          className="slider-track"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
-            width: `${(products.length * 100) / itemsPerView}%`
-          }}
-        >
-          {products.map((product, index) => (
-            <div 
-              key={product.id} 
-              className="slider-item"
-              style={{ width: `${100 / products.length}%` }}
-            >
-              <ProductCard p={product} />
-            </div>
-          ))}
-        </div>
+      <div className="product-slider">
+        {/* Fallback grid if slider fails */}
+        {products.length <= itemsPerView ? (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${Math.min(products.length, itemsPerView)}, 1fr)`,
+            gap: '24px',
+            padding: '12px'
+          }}>
+            {products.map((product) => (
+              <ProductCard key={product.id} p={product} />
+            ))}
+          </div>
+        ) : (
+          <div 
+            className="slider-track"
+            style={{
+              transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+              width: `${(products.length * 100) / itemsPerView}%`
+            }}
+          >
+            {products.map((product, index) => (
+              <div 
+                key={product.id} 
+                className="slider-item"
+                style={{ width: `${100 / products.length}%` }}
+              >
+                <ProductCard p={product} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       
-      {/* Dots indicator */}
-      <div className="slider-dots">
-        {Array.from({ length: maxIndex + 1 }, (_, index) => (
-          <button
-            key={index}
-            className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* Dots indicator - only show if we have slides */}
+      {products.length > itemsPerView && (
+        <div className="slider-dots">
+          {Array.from({ length: maxIndex + 1 }, (_, index) => (
+            <button
+              key={index}
+              className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }

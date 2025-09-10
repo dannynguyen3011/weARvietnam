@@ -700,6 +700,9 @@ footer a:hover {
   overflow: hidden;
   border-radius: 16px;
   position: relative;
+  min-height: 300px;
+  background: var(--bg-light);
+  padding: 12px;
 }
 
 .slider-track {
