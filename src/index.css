@@ -97,7 +97,7 @@ header .links a.active {
 
 /* Hero Section */
 .hero { 
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: url('/bg.jpg') center/cover no-repeat;
   color: white;
   padding: 80px 40px; 
   border-radius: 20px; 
@@ -107,9 +107,24 @@ header .links a.active {
   overflow: hidden;
   border: 3px solid var(--secondary);
   box-shadow: 0 0 30px rgba(218, 37, 29, 0.3);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(218, 37, 29, 0.7) 0%, rgba(185, 28, 28, 0.8) 100%);
+  pointer-events: none;
+}
+
+.hero::after {
   content: '';
   position: absolute;
   top: 0;
@@ -120,20 +135,46 @@ header .links a.active {
   pointer-events: none;
 }
 
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .hero h1 {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 16px;
-  position: relative;
-  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 32px;
-  opacity: 0.9;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.4;
+}
+
+.hero-buttons {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  gap: 16px !important;
+}
+
+.hero-buttons .btn {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Grid and Layout */
